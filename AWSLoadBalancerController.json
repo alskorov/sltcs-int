@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "elasticloadbalancing:*",
+          "ec2:*",
+          "iam:*",
+          "waf-regional:*",
+          "wafv2:*",
+          "acm:*",
+          "tag:GetResources",
+          "cloudwatch:*"
+        ],
+        "Resource": "*"
+      }
+    ]
+  }
