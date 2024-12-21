@@ -11,13 +11,15 @@ terraform {
       version = "~> 5.53"
     }
   }
-}
 
-
-terraform {
   backend "s3" {
-    bucket         = local.bucket
+    bucket         = "aleksey-tf-state"
     key            = "terraform.tfstate"
-    region         = local.region
+    region         = "us-west-2"
   }
 }
+
+
+
+
+

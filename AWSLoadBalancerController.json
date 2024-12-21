@@ -11,7 +11,8 @@
           "wafv2:*",
           "acm:*",
           "tag:GetResources",
-          "cloudwatch:*"
+          "cloudwatch:*",
+          "shield:*"
         ],
         "Resource": "*"
       }
