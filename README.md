@@ -7,6 +7,8 @@ This project sets up an EKS cluster with associated resources using Terraform.
 ## Prerequisites
 - Terraform installed
 - AWS CLI configured with appropriate permissions
+- kubectl installed and configured
+- Helm installed (for managing Kubernetes charts)
 
 ## Files Overview
 
@@ -36,6 +38,28 @@ This file defines key environment-specific variables that can be easily customiz
 - **`eks_version`**: Kubernetes version for the EKS cluster (e.g., `1.31`).
 - **`bucket`**: S3 bucket name for storing the Terraform state file (e.g., `aleksey-tf-state`).
 
+
+## Deployment Flow
+
+1. Set up the AWS CLI with appropriate credentials:
+   ```bash
+   aws configure
+   ```
+
+2. Initialize Terraform:
+   ```bash
+   terraform init
+   ```
+
+3. Deploy the infrastructure:
+   ```bash
+   terraform plan
+   terraform apply
+   ```
+4. Configure kubectl to access the EKS cluster:
+    ```bash 
+    aws eks --region <region> update-kubeconfig --name <eks_name>
+    ```
 
 ## Post-Deployment Steps
 
