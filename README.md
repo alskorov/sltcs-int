@@ -59,7 +59,15 @@ This file defines key environment-specific variables that can be easily customiz
 4. Configure kubectl to access the EKS cluster:
     ```bash 
     aws eks --region <region> update-kubeconfig --name <eks_name>
-    ```
+
+5. Access the application via the ALB DNS:
+    Obtain the DNS name of the ALB from the ingress:
+
+```bash
+kubectl describe ingress myapp
+```
+6. Open the DNS in your browser.
+
 
 ## Post-Deployment Steps
 
